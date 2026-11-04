@@ -1,0 +1,52 @@
+var stereo_data = {
+  audio: "",
+  exist: false,
+  bgColor_rgb: "rgb(0, 183, 206)",
+  type: "text",
+  playListData: [
+    {
+      audiourl: "../audios/P102/1.mp3",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+  ],
+};
+var reading_data = {
+  mainTitle: "../images/pages/sb-icons/gramprac_main_title.png",
+  mainTitleIcon: "../images/pages/sb-icons/gram_main_title_icon.png",
+  mainTitleIconPos: { right: "90px" },
+  mainTitleAudio: "../audios/P63/G_GRAMMAR_PRACTICE.mp3",
+  subTitleTextLeft: "<span class='title-order'>1</span> Play it! ",
+  subTitleTextRight:
+    "In groups of three, cut a piece of paper into 14 small pieces and write 1, 2 or 3 on each piece of paper. Put the pieces of paper in a pile in the middle of the table. Take turns choosing a piece of paper and moving your marker that many spaces. Answer the question correctly and you can stay. If you answer it incorrectly, you have to go back two spaces. The first one to end wins!",
+  subTitleIcons: [],
+  subTitleAudio: "../audios/question-prompts/Page_063/Item_001_Play_it!.mp3",
+  slides: [
+    {
+      layout: "grid_columns",
+
+      mainImage: ["../images/pages/activities/img1.PNG"],
+      parent_class_name: "full_grid_with_background_image slide-9",
+      group_styles: "",
+      audio: [
+        "../audios/P102/Pg6_2.1_Stella.mp3",
+        "../audios/P102/dough.mp3",
+        "../audios/P102/sauce.mp3",
+        "../audios/P102/sprinkle.mp3",
+        "../audios/P102/cheese.mp3",
+        "../audios/P102/add.mp3",
+        "../audios/P102/pepperoni.mp3",
+        "../audios/P102/slice.mp3",
+      ],
+      word: [],
+      imagePlacePos: [],
+    },
+  ],
+};

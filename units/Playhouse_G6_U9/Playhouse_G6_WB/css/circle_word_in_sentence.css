@@ -1,0 +1,246 @@
+.que { 
+    width: 100%;
+    padding: 15px 10px; 
+    position: relative; 
+    padding-right: 40px; 
+    border-radius: 10px; 
+    font-size: 22px; 
+    box-sizing: border-box;
+} 
+
+.q_part { 
+    width: 100%;
+    letter-spacing: 1px; 
+    margin-right: 10px; 
+    height: intrinsic; 
+    height: -moz-max-content; 
+    height: -webkit-max-content; 
+    height: max-content; 
+} 
+
+.q_num_space { 
+    width: 27px; 
+    margin-right: 5px; 
+    flex-shrink: 0;
+} 
+
+.q_grp {
+    width: 100%;
+}
+
+.text_part { 
+    width: 100%;
+} 
+
+.pick_set { 
+    margin: 0 15px; 
+} 
+
+.all_picks { 
+    width: 100%; 
+} 
+
+.picks_grp { 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+} 
+
+.pick { 
+    width: 180px; 
+    margin: 2px; 
+    text-align: center; 
+    min-width: 150px; 
+    border: 2px solid rgb(255, 255, 255); 
+    padding: 2px 10px; 
+    font-weight: bold; 
+    color: rgb(0, 185, 242); 
+} 
+
+.roundedCorners { 
+    border-radius: 10px; 
+} 
+
+.icon_wrap { 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+} 
+
+.tick, 
+.cross { 
+    width: 25px; 
+    height: 25px; 
+} 
+
+
+/* =====================================================
+   QUESTION GROUP WIDTH
+===================================================== */
+
+.question_group { 
+    width: 80%;
+    margin: 0 auto; 
+} 
+
+
+/* =====================================================
+   PARENT WRAPPER
+===================================================== */
+
+.all_cont {
+    width: 100%;
+}
+
+.all_cont > .d-flex.flex-wrap.justify-content-center.align-items-center.mb-70 {
+    width: 100%;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.text_input_area { 
+    text-align: center; 
+    width: 100px; 
+    background-color: #F7F5F0; 
+    border: none; 
+    border-radius: 10px; 
+    border-bottom: 2px solid black; 
+    margin-bottom: 5px; 
+    color: black !important; 
+} 
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.img_space { 
+    width: 250px; 
+} 
+
+.img_space img { 
+    max-width: 100%;
+    object-fit: contain;
+} 
+
+
+/* =====================================================
+   AUDIO
+===================================================== */
+
+.audioIcon.off.d-flex.align-items-center { 
+    margin: 5px; 
+    margin-top: -5px; 
+} 
+
+
+/* =====================================================
+   HELPERS
+===================================================== */
+
+.border-none { 
+    border: none !important; 
+    box-shadow: none !important; 
+} 
+
+.d-none { 
+    display: none !important; 
+} 
+
+.not-disapled { 
+    opacity: 1 !important; 
+    pointer-events: all; 
+} 
+
+
+/* =====================================================
+   MEDIA QUERIES
+===================================================== */
+
+@media (max-width: 1799.98px) {
+
+}
+
+
+@media (max-width: 1399.98px) { 
+
+    .que { 
+        margin-bottom: 2px; 
+        padding: 10px 6px; 
+        padding-right: 40px; 
+    }
+
+    .question_group {
+        width: 85%;
+    }
+
+} 
+
+
+@media (max-width: 1199.98px) {
+
+    .question_group {
+        width: 90%;
+    }
+
+}
+
+
+@media (max-width: 991.98px) { 
+
+    .q_part { 
+        letter-spacing: 1px; 
+        margin-right: -2px; 
+    }
+
+    .question_group {
+        width: 95%;
+    }
+
+} 
+
+
+@media (max-width: 767.98px) { 
+
+    .question_group { 
+        width: 100%; 
+    }
+
+    .que {
+        padding-right: 35px;
+    }
+
+} 
+
+
+@media (max-width: 575.98px) {
+
+    .que {
+        font-size: 22px;
+    }
+
+    .pick {
+        min-width: 120px;
+        width: 150px;
+    }
+
+}
+
+
+@media (max-width: 475.98px) {
+
+    .que {
+        font-size: 20px;
+    }
+
+    .pick_set {
+        margin: 0 8px;
+    }
+
+    .text_input_area {
+        width: 85px;
+    }
+
+}

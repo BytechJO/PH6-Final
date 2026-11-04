@@ -1,0 +1,492 @@
+/* =========================================================
+   WORD SEARCH
+========================================================= */
+
+:root {
+  --tempBlue: rgb(39, 150, 166);
+}
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.options {
+  height: 575px;
+  position: relative;
+}
+
+.all_cont {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================================
+   MAIN WRAPPER
+========================================================= */
+
+.wordsearch_wrap {
+  position: relative;
+
+  width: 92%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 55px;
+}
+
+/* =========================================================
+   MATRIX HOLDER
+========================================================= */
+
+.wordmatrix_holder {
+  position: relative;
+
+  width: 52%;
+  height: 100%;
+
+  min-width: 420px;
+  min-height: 420px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: visible;
+}
+
+/* =========================================================
+   MATRIX
+========================================================= */
+
+.wordmatrix {
+  position: relative;
+
+  width: fit-content;
+  height: fit-content;
+
+  margin: 0 !important;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.wordmatrix .ws_row {
+  display: flex;
+
+  background-color: transparent;
+}
+
+/* =========================================================
+   CELL
+========================================================= */
+
+.wordmatrix .ws_row .ws_col {
+  width: 40px;
+  height: 40px;
+
+  max-width: 60px;
+  max-height: 60px;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  z-index: 2;
+
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.wordmatrix .ws_row .ws_col:hover {
+  background-color: rgba(39, 150, 166, 0.1);
+}
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.wordmatrix .ws_row .ws_col p {
+  position: static !important;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0 !important;
+
+  padding: 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arcon;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-align: center;
+
+  color: #222;
+
+  text-transform: uppercase;
+
+  transform: none !important;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* =========================================================
+   RECT / SELECTION
+========================================================= */
+
+.rect,
+.corr {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  box-sizing: border-box;
+
+  border-radius: 100px;
+
+  transform-origin: center left;
+
+  pointer-events: none;
+}
+
+/* أثناء السحب */
+
+.rect {
+  z-index: 4;
+
+  border: 2px solid var(--tempBlue);
+
+  background-color: rgba(39, 150, 166, 0.12);
+}
+
+/* الكلمة الصحيحة */
+
+.corr {
+  z-index: 1;
+
+  border: 2px solid rgba(39, 150, 166, 0.55);
+
+  background-color: rgba(39, 150, 166, 0.23);
+}
+
+.corrHolder {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   WORD LIST
+========================================================= */
+
+.wordlist {
+  position: relative;
+
+  width: 390px;
+  height: auto;
+
+  max-height: 455px;
+
+  padding: 25px 25px 25px 45px;
+
+  display: grid !important;
+
+  grid-template-columns: repeat(2, minmax(145px, 1fr));
+
+  column-gap: 28px;
+  row-gap: 7px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  flex-shrink: 0;
+
+  font-family: Arcon;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.2px;
+
+  background: white;
+
+  border: 2px solid rgba(39, 150, 166, 0.16);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.07),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* scrollbar */
+
+.wordlist::-webkit-scrollbar {
+  width: 6px;
+}
+
+.wordlist::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wordlist::-webkit-scrollbar-thumb {
+  background: rgba(39, 150, 166, 0.35);
+  border-radius: 20px;
+}
+
+/* =========================================================
+   WORD
+========================================================= */
+
+.wordlist .word {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 5px 4px 5px 27px;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.wordlist .word p {
+  margin: 0;
+
+  width: 100%;
+
+  word-break: normal;
+
+  white-space: normal;
+}
+
+/* CHECK ICON */
+
+.wordlist .word .fa {
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   WORD BUTTON
+========================================================= */
+
+.wordlist_but {
+  color: #fff;
+
+  background-color: var(--tempBlue);
+
+  border-radius: 10px;
+
+  padding: 7px 13px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  position: fixed;
+
+  top: 120px;
+  right: 10px;
+
+  cursor: pointer;
+
+  z-index: 30;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   MOBILE WORD LIST POPUP
+========================================================= */
+
+.onPop {
+  position: fixed !important;
+
+  z-index: 25;
+
+  top: 50% !important;
+  left: 50% !important;
+
+  right: auto !important;
+  bottom: auto !important;
+
+  transform: translate(-50%, -50%);
+
+  width: 80% !important;
+
+  max-width: 520px;
+
+  max-height: 70vh;
+
+  margin: 0 !important;
+
+  background: #fff;
+}
+
+/* =========================================================
+   MEDIA QUERY
+========================================================= */
+
+@media (max-width: 1799.98px) {
+  .wordmatrix_holder {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .wordsearch_wrap {
+    gap: 40px;
+  }
+
+  .wordmatrix .ws_row .ws_col p {
+    font-size: 24px;
+  }
+
+  .wordlist {
+    width: 360px;
+
+    font-size: 20px;
+
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .wordsearch_wrap {
+    gap: 30px;
+  }
+
+  .wordmatrix_holder {
+    min-width: 360px;
+  }
+
+  .wordmatrix .ws_row .ws_col p {
+    font-size: 21px;
+  }
+
+  .wordlist {
+    width: 325px;
+
+    font-size: 18px;
+
+    padding: 20px 18px 20px 38px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wordsearch_wrap {
+    width: 100%;
+
+    gap: 0;
+  }
+
+  .wordmatrix_holder {
+    width: 100%;
+
+    min-width: 320px;
+  }
+
+  .wordmatrix .ws_row .ws_col p {
+    font-size: 18px;
+  }
+
+  .wordlist {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wordmatrix .ws_row .ws_col p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .activity_wrap {
+    padding: 0;
+  }
+
+  .wordmatrix_holder {
+    min-width: 290px;
+    min-height: 290px;
+  }
+
+  .wordlist {
+    grid-template-columns: 1fr;
+
+    width: 80%;
+
+    max-height: 65vh;
+  }
+}
+
+@media (max-width: 475.98px) {
+  .wordlist_but {
+    top: 126px;
+  }
+}

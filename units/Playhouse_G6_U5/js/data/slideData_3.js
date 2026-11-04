@@ -1,0 +1,60 @@
+var stereo_data = {
+  audio: "",
+  exist: true,
+  bgColor_rgb: "rgb(0, 183, 206)",
+  playListData: [
+    {
+      audiourl: "../audios/P46/1.mp3",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+  ],
+};
+var reading_data = {
+  mainTitle: "../images/pages/sb-icons/writing.png",
+  mainTitleIcon: "../images/pages/sb-icons/adv_icon_1.png",
+  mainTitleIconPos: { right: "90px" },
+  mainTitleAudio: "../audios/P46/WRITING.mp3",
+  subTitleTextLeft: "<span class='title-order'>1</span> Read about it!",
+  subTitleTextRight: "",
+  subTitleIcons: [],
+  subTitleAudio: "../audios/question-prompts/Page_046/Item_001_Read_about_it!.mp3",
+  slides: [
+    {
+      layout: "grid_columns",
+
+      mainImage: [],
+      top_right_image: [""],
+      middleImage: [""],
+      parent_class_name: "grid_with_border slide_text_without_background",
+      group_styles: "border: none;",
+      audio: [
+        "../audios/P46/Pg6_2.1_Stella.mp3",
+        "../audios/P46/dough.mp3",
+        "../audios/P46/sauce.mp3",
+        "../audios/P46/sprinkle.mp3",
+        "../audios/P46/cheese.mp3",
+        "../audios/P46/add.mp3",
+        "../audios/P46/pepperoni.mp3",
+        "../audios/P46/slice.mp3",
+      ],
+      word: [
+        "<span class='ss_text1'>One important skill in writing informational articles is finding useful information. This is called research. </span>" +
+          "<span class='ss_text1'>To be a good researcher, you must use keywords to find the right information. These</span>" +
+          "<span class='ss_text1'>important words are the ‘keys' that help you ‘unlock' the door that</span>" +
+          "<span class='ss_text1'>leads to a good report. Sometimes when you are researching, one</span>" +
+          "<span class='ss_text1'>keyword does not give you the information you are looking for. If Keywords</span>" +
+          "<span class='ss_text1'>that happens, you need to try other words to find the information you want.</span>",
+        "<img src='../images/pages/activities/3-img-1.png'>",
+      ],
+      imagePlacePos: [{ colWidth: [10, 2], colData: [1, 1] }],
+    },
+  ],
+};

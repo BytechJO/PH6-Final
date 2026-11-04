@@ -1,0 +1,129 @@
+var stereo_data = {
+  audio: "",
+  exist: true,
+  bgColor_rgb: "rgb(0, 183, 206)",
+  type: "toggle_slide",
+  playListData: [
+    {
+      audiourl: "../audios/P13/1.mp3",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+  ],
+};
+var reading_data = {
+  mainTitle: "../images/pages/sb-icons/conv_main_title.png",
+  mainTitleIcon: "../images/pages/sb-icons/conv_main_title_icon.png",
+  mainTitleIconPos: { right: "90px" },
+  mainTitleAudio: "../audios/P13/CONVERSATION.mp3",
+  subTitleTextLeft:
+    "<span class='title-order'>1</span> Listen and read. Then act it out with a friend.",
+  subTitleTextRight: "",
+  subTitleIcons: [],
+  subTitleAudio: "../audios/question-prompts/Page_013/Item_001_Listen_and_read._Then_act_it_out_with_a_friend.mp3",
+  slides: [
+    {
+      layout: "grid_columns",
+
+      mainImage: [],
+      top_right_image: ["../images/pages/activities/6.jpg"],
+      parent_class_name: "grid_with_border",
+      group_styles: "padding-top: 20px; padding-bottom: 50px;",
+      audio: [
+        "../audios/P13/Pg6_2.1_Stella.mp3",
+        "../audios/P13/dough.mp3",
+        "../audios/P13/sauce.mp3",
+        "../audios/P13/sprinkle.mp3",
+        "../audios/P13/cheese.mp3",
+        "../audios/P13/add.mp3",
+        "../audios/P13/pepperoni.mp3",
+        "../audios/P13/slice.mp3",
+      ],
+      word: [
+        "<span class='blue_text'>Lilly</span>: ",
+        "Did you hear they want to <span class='blue_text'>film</span> a <span class='blue_text'>documentary</span> here in our town?",
+
+        "<span class='blue_text'>Max</span>: ",
+        "No way! That’s amazing! What do they want to <span class='blue_text'>film</span> about? <br> Will there be any famous actors in it?",
+
+        "<span class='blue_text'>Lilly</span>: ",
+        "The <span class='blue_text'>producer</span> of the famous film ‘What’s Up, Joe?’ would like", //3
+        "to make a <span class='blue_text'>documentary</span> about Benny Green. You know, he’s the",
+        "man who worked at a restaurant when he was a kid and now owns over a hundred restaurants",
+
+        "<span class='blue_text'>Max</span>: ",
+        "Of course! He’s so famous. He’s also the one who donated all the money needed to open Miracle", //
+        "Park. I want to meet him. Is he coming to <span class='blue_text'>film</span> the <span class='blue_text'>documentary</span>?",
+
+        "<span class='blue_text'>Lilly</span>: ",
+        "Yes, and the <span class='blue_text'>producer</span> of the film is one of the people who worked to get the money for the park.",
+        "She will also be the <span class='blue_text'>director</span>.",
+
+        "<span class='blue_text'>Max</span>: ",
+        "Do you know who the <span class='blue_text'>screenwriter</span> is?",
+
+        "<span class='blue_text'>Lilly</span>:",
+        "I’m not sure.",
+        "<span class='blue_text'>Max</span>:",
+        "Maybe I could hang out at the park and be in one of the <span class='blue_text'>scenes</span>!",
+
+        "<span class='blue_text'>Lilly</span>:",
+        "It’s a <span class='blue_text'>documentary</span>! Not a comedy <span class='blue_text'>film</span>!",
+
+        "<span class='blue_text'>Max</span>:",
+        "Ha ha! You’re so funny ... not! I think I would look good on the big <span class='blue_text'>screen</span>.",
+
+        "<span class='blue_text'>Lilly</span>:",
+        "They’re actually going to <span class='blue_text'>film</span> it in a studio, but the set will look like Miracle Park.",
+
+        "<span class='blue_text'>Max</span>:",
+        "That’s a shame. I guess I can’t become a film star yet. Maybe next week!",
+      ],
+      imagePlacePos: [
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [0, 1] },
+        { colWidth: [1, 11], colData: [0, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [0, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [0, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        // {"colWidth": [12], "colData": [1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+        { colWidth: [1, 11], colData: [1, 1] },
+      ],
+      bottomImage: ["../images/pages/page-1/1-background-buttom.png"],
+      bottomAudio: [
+        "../audios/P13/Pg6_2.1_Stella.mp3",
+        "../audios/P13/dough.mp3",
+        "../audios/P13/sauce.mp3",
+        "../audios/P13/sprinkle.mp3",
+      ],
+      bottomWord: [
+        "<span class='blue_text'>Useful Expressions</span>",
+        "hang out ",
+        "You’re so funny ... not!",
+        "That’s a shame.",
+        "(a description + not = I was just joking about what I said.)",
+      ],
+      bottomImagePlacePos: [
+        { colWidth: [5, 5, 2], colData: [0, 1, 0] },
+        { colWidth: [1, 4, 3, 4], colData: [0, 1, 1, 1] },
+        { colWidth: [5, 7], colData: [0, 1] },
+      ],
+    },
+  ],
+};

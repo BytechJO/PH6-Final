@@ -1,0 +1,83 @@
+/* Shared G6 sizing: keep activity/image coordinate systems unchanged. */
+body { font-size:22px; }
+header.fixed-top { height:100px!important; }
+header .container.header_wrap { width:100%;max-width:none;padding:0 18px; }
+header .unitTitle { position:absolute;left:50%;top:12px;transform:translateX(-50%);margin:0!important;width:calc(100% - 390px)!important;max-width:1000px!important;justify-content:center; }
+header .unitTitle .audioIcon { margin:0!important;max-width:100%; }
+header .unitTitleText { font-size:clamp(28px,2.7vw,44px)!important;max-width:100%!important;width:auto!important; }
+header .unitTitleNumber { font-size:clamp(26px,2.2vw,36px)!important;margin:0!important; }
+header .unitTitleText:has(.unitTitleNumber) { flex-wrap:nowrap;gap:16px;padding:4px 18px; }
+header .unitTitle img { height:42px!important;width:auto!important;margin-left:0; }
+header .unitIcon { width:86px!important;height:70px!important;margin:7px 0!important; }
+header .unitIcon > img { max-height:70px;object-fit:contain; }
+header .full_screen,header .homeBtn,header .toolbarToggleBtn { width:48px!important;min-width:48px!important;height:48px!important; }
+header .homeBtn img,header .full_screen img { width:48px!important;height:48px!important; }
+header .full_screen { position:fixed;right:16px;top:14px; }
+header .col-md-2 { margin-left:auto;padding-right:60px;min-width:180px; }
+footer .footer_wrap { margin-bottom:5px; }
+footer .footer_wrap img { height:44px!important;width:auto; }
+footer .footer_nav_btn { height:46px!important;width:auto!important; }
+footer .homeBtn,footer .emt_space.btnWidth { width:44px;min-width:44px; }
+.subFooterNav,.ctrlIcon img { width:60px!important;height:60px!important; }
+.q-type-img-container { margin-top:18px; }
+.mainTitle { height:40px!important; }
+.mainTitleIcon { height:54px!important;margin-top:-10px; }
+.activityTitle,.sub_title { font-size:24px!important; }
+.activity-heading,.activity-heading .heading_image,.activity-heading .heading_text { font-size:26px!important; }
+.txt_box,.tickContent,.word_dash { font-size:22px; }
+@media(max-width:1400px),(max-height:800px) {
+ header.fixed-top {height:82px!important;}
+ header .unitTitle {top:12px;width:calc(100% - 350px)!important;}
+ header .unitTitleText {font-size:30px!important;}
+ header .unitTitleNumber {font-size:28px!important;}
+ header .unitTitle img {height:34px!important;}
+ header .unitIcon {height:60px!important;width:76px!important;}
+ header .unitIcon > img {max-height:60px;}
+ .subFooterNav,.ctrlIcon img {width:52px!important;height:52px!important;}
+ .activityTitle,.sub_title {font-size:22px!important;}
+ .activity-heading,.activity-heading .heading_image,.activity-heading .heading_text {font-size:24px!important;}
+}
+
+/* Match the final G5 laptop typography and control scale. */
+:root { --lesson-tool-size:clamp(42px,min(3.5vw,7vh),64px); }
+header .unitTitleText { font-size:clamp(28px,2.7vw,44px)!important;line-height:1.18!important;text-align:center; }
+header .unitTitleNumber { font-size:clamp(26px,2.2vw,36px)!important; }
+header .unitTitleText:has(.unitTitleNumber) { gap:4px;padding:5px 10px!important;border-radius:14px; }
+header .unitTitle:has(.unitTitleNumber) img { height:38px!important; }
+header .full_screen,header .homeBtn,header .toolbarToggleBtn,
+header .homeBtn img,header .full_screen img { width:var(--lesson-tool-size)!important;min-width:var(--lesson-tool-size)!important;height:var(--lesson-tool-size)!important; }
+header .col-md-2 { padding-right:calc(var(--lesson-tool-size) + 16px); }
+.subFooterNav { width:clamp(54px,5.8vw,80px)!important;height:clamp(54px,5.8vw,80px)!important; }
+.activityTitle,.sub_title,.activity-heading,.activity-heading .heading_image,.activity-heading .heading_text,.page_sub_title { font-size:clamp(21px,1.55vw,28px)!important;line-height:1.35!important; }
+.txt,.ss_text,.text_input_area,.txt_box,.tickContent,.word_dash { font-size:clamp(20px,1.45vw,26px)!important; }
+.ss_text { line-height:1.45; }
+@media(max-height:800px) {
+ header .unitIcon { height:72px!important;width:86px!important;margin:4px 0!important; }
+ header .unitIcon > img { max-height:72px; }
+ footer .footer_nav_btn { height:54px!important; }
+ footer .footer_wrap img { height:46px!important; }
+ .sub_footer .func_ctrls img,.ctrlIcon img { width:46px!important;height:46px!important; }
+}
+/* Keep the three Student Book tools in one row, as in G5. */
+header .d-flex:has(> .toolbarToggleBtn) {
+ position:fixed!important;top:12px!important;right:14px!important;left:auto!important;
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ flex-wrap:nowrap!important;gap:8px!important;width:auto!important;
+ height:var(--lesson-tool-size)!important;margin:0!important;padding:0!important;
+}
+header .d-flex:has(> .toolbarToggleBtn) > :is(.toolbarToggleBtn,.homeBtn,.full_screen) {
+ position:static!important;flex:0 0 var(--lesson-tool-size)!important;
+ margin:0!important;padding:0!important;transform:none!important;
+}
+header .homeBtn a {display:block;}
+header :is(.homeBtn,.full_screen) img,header .toolbarToggleBtn {
+ display:block;object-fit:contain;padding:0!important;
+}
+/* Wide Workbook badges retain their aspect ratio instead of shrinking to 86px. */
+header .unitIcon {
+ width:auto!important;height:72px!important;margin:4px 12px!important;
+}
+header .unitIcon > img {
+ width:auto!important;height:72px!important;max-height:72px!important;
+ max-width:150px!important;object-fit:contain;
+}

@@ -1,0 +1,297 @@
+/* =========================================================
+   MAIN AREA
+========================================================= */
+
+.all_cont {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.screen_elements {
+  width: 100%;
+  height: 100%;
+}
+
+.group_elm {
+  width: 100%;
+}
+
+.fillin_gr {
+  width: 100%;
+}
+
+.q_space {
+  width: 100%;
+}
+
+/* =========================================================
+   TWO BOXES
+========================================================= */
+
+.group_boxes_container {
+  width: 80%;
+
+  margin: 10px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  align-items: stretch;
+}
+.func_ctrls {
+    display: none !important;
+}
+/* =========================================================
+   BOX
+========================================================= */
+
+.group_box {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 15px 25px 25px;
+
+  border-radius: 50px;
+
+  overflow: hidden;
+}
+
+/* LEFT BOX - PRE */
+.group_box_1 {
+  background: rgba(240, 250, 245, 0.92);
+
+  border: 3px solid #d5edcc;
+}
+
+/* RIGHT BOX - RE */
+.group_box_2 {
+  background: #c9ebfb;
+
+  border: 3px solid transparent;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.group_box_heading {
+  width: 100%;
+
+  min-height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  font-family: Arcon;
+  font-size: 28px;
+  font-weight: bold;
+
+  color: #222;
+}
+
+/* PRE RED */
+.group_box_1 .group_box_heading {
+  color: #222;
+}
+
+.group_box_1 .group_box_heading .audioIcon {
+  width: 100%;
+}
+
+/* RE RED */
+.group_box_2 .group_box_heading {
+  color: #222;
+}
+
+.group_box_heading .audioIcon {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   INPUTS CONTAINER
+========================================================= */
+
+.group_box_inputs {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: 5px 30px;
+}
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.group_input_question {
+  position: relative;
+
+  width: 100% !important;
+
+  min-height: 50px;
+
+  margin: 0 !important;
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.group_input_wrap {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.group_word_input {
+  width: 100% !important;
+
+  height: 44px;
+
+  padding: 4px 35px 4px 8px;
+
+  border: none !important;
+
+  border-bottom: 2px solid #777 !important;
+
+  outline: none !important;
+
+  background: transparent !important;
+
+  font-family: Arcon;
+
+  font-size: 22px;
+
+  text-align: left;
+
+  color: #222;
+}
+
+.group_word_input:focus {
+  outline: none !important;
+
+  border-bottom-color: #00aeef !important;
+}
+
+/* =========================================================
+   TICK / CROSS
+========================================================= */
+
+.group_input_icon {
+  position: absolute;
+
+  right: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 28px;
+  height: 28px;
+}
+
+.group_input_icon .tick,
+.group_input_icon .cross {
+  display: none;
+
+  width: 28px;
+  height: 28px;
+}
+
+.group_input_icon .tick img,
+.group_input_icon .cross img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   COLOR THE PREFIX PART IN HEADINGS
+========================================================= */
+
+.group_box_1 .group_box_heading {
+  color: #222;
+}
+
+.group_box_2 .group_box_heading {
+  color: #222;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199.98px) {
+  .group_boxes_container {
+    width: 94%;
+  }
+
+  .group_box {
+    min-height: 290px;
+
+    padding: 15px 18px;
+  }
+
+  .group_box_inputs {
+    padding: 5px 20px;
+  }
+
+  .group_box_heading {
+    font-size: 25px;
+  }
+
+  .group_word_input {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .group_boxes_container {
+    width: 95%;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .group_box {
+    min-height: 250px;
+
+    border-radius: 35px;
+  }
+
+  .group_box_inputs {
+    padding: 5px 15px;
+  }
+}

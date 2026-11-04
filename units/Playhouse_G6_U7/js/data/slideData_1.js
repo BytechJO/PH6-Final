@@ -1,0 +1,98 @@
+var stereo_data = {
+  audio: "",
+  exist: true,
+  bgColor_rgb: "rgb(0, 183, 206)",
+  type: "text",
+  playListData: [
+    {
+      audiourl: "../audios/P61/1.mp3",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+    {
+      url: "",
+    },
+  ],
+};
+var reading_data = {
+  mainTitle: "../images/pages/sb-icons/conv_main_title.png",
+  mainTitleIcon: "../images/pages/sb-icons/conv_main_title_icon.png",
+  mainTitleIconPos: { right: "90px" },
+  mainTitleAudio: "../audios/P61/CONVERSATION.mp3",
+  subTitleTextLeft:
+    "<span class='title-order'>1</span> Listen and read. Then act it out with a friend.",
+  subTitleTextRight: "",
+  subTitleIcons: [],
+  subTitleAudio: "../audios/question-prompts/Page_061/Item_001_Listen_and_read._Then_act_it_out_with_a_friend.mp3",
+  slides: [
+    {
+      layout: "grid_columns",
+
+      mainImage: [],
+      top_right_image: ["../images/pages/page-2/1-img.png"],
+      parent_class_name: "grid_with_border",
+      group_styles: "",
+      audio: [
+        "../audios/P61/Pg6_2.1_Stella.mp3",
+        "../audios/P61/dough.mp3",
+        "../audios/P61/sauce.mp3",
+        "../audios/P61/sprinkle.mp3",
+        "../audios/P61/cheese.mp3",
+        "../audios/P61/add.mp3",
+        "../audios/P61/pepperoni.mp3",
+        "../audios/P61/slice.mp3",
+      ],
+      word: [
+        "<span class='blue_text'>Mrs. Wright</span>: ",
+        "Alright, students settle down. we're going to watch a film about <br><span class='blue_text'>outer space</span>.",
+        "<span class='blue_text'>Lilly</span>: ",
+        "I'm so excited. I love to learn about <span class='blue_text'>stars</span> and <span class='blue_text'>planets</span>. I belong <br>to the Astronomy Club.",
+        "<span class='blue_text'>Jenny</span>: ",
+        "Astronomy? What's that?",
+        "<span class='blue_text'>Mrs. Wright</span>: ",
+        "Astronomy is the study of the universe and <span class='blue_text'>outer space</span>.",
+        "<span class='blue_text'>Yoshi</span>: ",
+        "How do you study the universe?",
+        "<span class='blue_text'>Mrs. Wright</span>: ",
+        "Well, some very smart people use <span class='blue_text'>radar</span> and <span class='blue_text'>satellites</span> to watch what's going on above our <span class='blue_text'>planet</span>. There are even <span class='blue_text'>astronauts</span> who stay on <span class='blue_text'>space stations</span> to watch and study the universe.",
+        "<span class='blue_text'>Jenny</span>:",
+        "People live on <span class='blue_text'>space stations</span>? How cool is that?",
+        "<span class='blue_text'>Mrs. Wright:</span>:",
+        "Pretty cool! Shh! Shh! Listen up, students. Here's the <span class='blue_text'>countdown!</span> Let's count together: 3... 2... 1... <span class='blue_text'>BLAST-OFF</span>!",
+        "",
+      ],
+      imagePlacePos: [
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [2, 10], colData: [1, 1] },
+        { colWidth: [12], colData: [1] },
+      ],
+      bottomImage: ["../images/pages/page-1/1-background-buttom.png"],
+      bottomAudio: [
+        "../audios/P61/Pg6_2.1_Stella.mp3",
+        "../audios/P61/dough.mp3",
+        "../audios/P61/sauce.mp3",
+        "../audios/P61/sprinkle.mp3",
+      ],
+      bottomWord: [
+        "<span class='blue_text'>Useful Expressions</span>",
+        "... settle down. ",
+        "How cool is that?",
+        "Shh! Shh!",
+      ],
+      bottomImagePlacePos: [
+        { colWidth: [5, 5, 2], colData: [0, 1, 0] },
+        { colWidth: [1, 4, 3, 4], colData: [0, 1, 1, 1] },
+      ],
+    },
+  ],
+};

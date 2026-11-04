@@ -1,0 +1,336 @@
+.all_cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.screen_elements {
+    width: 90%;
+    height: 100%;
+}
+
+
+/* ====================================================== */
+/* MAIN QUESTIONS CONTAINER */
+/* ====================================================== */
+
+.group_elm {
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* ====================================================== */
+/* EACH COLUMN */
+/* ====================================================== */
+
+.tick_group {
+    width: 47%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: stretch;
+
+    margin: 20px 0;
+}
+
+
+/* ====================================================== */
+/* QUESTION */
+/* ====================================================== */
+
+.que {
+    width: 100%;
+    min-height: 85px;
+
+    margin: 4px 0;
+    padding: 8px 10px;
+
+    border-radius: 5px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ====================================================== */
+/* QUESTION TEXT IF EXISTS */
+/* ====================================================== */
+
+.q_part {
+    width: fit-content;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.q_num_space {
+    width: 27px;
+}
+
+
+/* ====================================================== */
+/* OPTIONS ROW */
+/* ====================================================== */
+
+.picks_grp {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+/* ====================================================== */
+/* QUESTION NUMBER */
+/* ====================================================== */
+
+.sentence-number {
+    width: 35px;
+    min-width: 35px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: #000;
+}
+
+
+/* ====================================================== */
+/* SELECTABLE WORD */
+/* ====================================================== */
+
+.pick {
+    width: fit-content;
+
+    height: 45px;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: none;
+
+    font-size: 27px;
+
+    border-radius: 0 !important;
+
+    border-bottom: 3px solid transparent;
+
+    cursor: pointer;
+}
+
+
+/* Selected word */
+
+.selectedDefault {
+    border: none;
+    border-bottom: 2px solid blue;
+}
+
+
+/* ====================================================== */
+/* PICK TEXT */
+/* ====================================================== */
+
+.pick .txt {
+    width: fit-content;
+    white-space: nowrap;
+}
+
+
+/* ====================================================== */
+/* IMAGE */
+/* ====================================================== */
+
+.img_space {
+    width: 400px;
+    height: 500px;
+}
+
+.img_space img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ====================================================== */
+/* TICK / CROSS */
+/* ====================================================== */
+
+.icon_wrap {
+    position: absolute;
+
+    top: 50%;
+    right: -35px;
+
+    transform: translateY(-50%);
+}
+
+.tick,
+.cross {
+    width: 25px;
+    height: 25px;
+}
+
+.tick img,
+.cross img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* ====================================================== */
+/* OTHER */
+/* ====================================================== */
+
+.roundedCorners {
+    border-radius: 0;
+}
+
+
+/* ====================================================== */
+/* MEDIA QUERIES */
+/* ====================================================== */
+
+@media (max-width: 1799.98px) {
+
+    .que {
+        padding: 8px;
+    }
+
+    .pick {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 1399.98px) {
+
+    .group_elm {
+        width:80%;
+    }
+
+    .tick_group {
+        width: 48%;
+    }
+
+    .que {
+        padding: 5px;
+    }
+
+    .pick {
+        font-size: 23px;
+    }
+
+    .sentence-number {
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 1199.98px) {
+
+    .group_elm {
+        width: 80%;
+    }
+
+    .picks_grp {
+        gap: 5px;
+    }
+
+    .pick {
+        font-size: 21px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+
+    .group_elm {
+        flex-wrap: wrap;
+    }
+
+    .tick_group {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .que {
+        min-height: 65px;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    .pick {
+        font-size: 20px;
+    }
+
+    .sentence-number {
+        font-size: 21px;
+        width: 30px;
+        min-width: 30px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .group_elm {
+        width: 100%;
+    }
+
+    .pick {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 475.98px) {
+
+    .tickBox {
+        height: 36px;
+        width: 36px;
+        min-width: 36px;
+    }
+
+    .que {
+        padding: 4px;
+    }
+
+    .picks_grp {
+        gap: 3px;
+    }
+}
